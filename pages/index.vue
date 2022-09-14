@@ -88,6 +88,8 @@ export default {
   data () {
     return {
       colors: ['primary', 'info', 'success', 'warning', 'error', 'background'],
+      // hiddenクラスを付けることにより画面サイズに応じて要素を非表示にする（Vuetifyの機能）
+      // 参考：https://qiita.com/minuro/items/4dd7b0bbb09f5cdc155f
       customClass: [
         { name: 'hidden-ipad-and-down', color: 'error', des: 'ipad未満で隠す' },
         { name: 'hidden-ipad-and-up', color: 'info', des: 'ipad以上で隠す' },
