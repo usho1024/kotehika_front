@@ -127,7 +127,7 @@
             hide-default-footer
           >
             <template
-              v-slot:[`item.name`]="{ item }"
+              #[`item.name`]="{ item }"
             >
               <nuxt-link
                 :to="$my.projectLinkTo(item.id)"
@@ -137,7 +137,7 @@
               </nuxt-link>
             </template>
             <template
-              v-slot:[`item.updatedAt`]="{ item }"
+              #[`item.updatedAt`]="{ item }"
             >
               {{ $my.dateFormat(item.updatedAt) }}
             </template>
@@ -153,6 +153,7 @@ import homeImg from '~/assets/images/logged-in/home.png'
 
 export default {
   layout: 'logged-in',
+  middleware: ['get-project-list'],
   data () {
     return {
       homeImg,
