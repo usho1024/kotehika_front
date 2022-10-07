@@ -2,6 +2,7 @@
   <v-app>
     <before-login-app-bar />
     <v-main>
+      <app-toaster />
       <nuxt />
     </v-main>
     <app-footer />
@@ -10,5 +11,8 @@
 
 <script>
 export default {
+  name: 'LayoutsBeforeLogin'
 }
 </script>
+
+AppToaster
